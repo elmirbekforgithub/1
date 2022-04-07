@@ -14,24 +14,33 @@ public class App {
     public static void main(String[] args) {
         RelationMethodsNeedSQL methodsNeedSQL = new RelationMethodsNeedSQL();
         while (true) {
+            System.out.println("//////////////////");
             System.out.println("addUser    -> 1 ");
             System.out.println("deleteUSer -> 2");
             System.out.println("getUser    -> 3");
+            System.out.println("//////////////////");
             System.out.print("Enter here: ");
             int choice = numeric.nextInt();
             if (choice == 1) {
+                System.out.println("*****************");
                 System.out.print("user name        : ");
                 String name = forword.nextLine();
+                System.out.println("-------------------");
                 System.out.print("user last_name   : ");
                 String last_name = forword.nextLine();
+                System.out.println("-------------------");
                 System.out.print("user age         : ");
                 int age = numeric.nextInt();
+                System.out.println("-------------------");
                 System.out.print("user country     : ");
                 String country = forword.nextLine();
+                System.out.println("*****************");
                 methodsNeedSQL.addUser(name, last_name, age, country);
             } else if (choice == 2) {
+                System.out.println("*****************");
                 System.out.print("user id        : ");
                 int delete = numeric.nextInt();
+                System.out.println("================");
                 methodsNeedSQL.deleteUser(delete);
             } else if (choice == 3) {
                 System.out.print("enter id       : ");
